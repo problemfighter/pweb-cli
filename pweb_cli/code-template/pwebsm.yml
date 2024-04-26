@@ -12,18 +12,18 @@ dependencies:
     module:
       status: "inactive"
       script:
-        - python setup.py develop
+        - pip install -e .
       subdir:
         - name: "example-module"
           script:
-            - python setup.py develop
+            - pip install -e .
 
     clone:
       branch: "dev"
       status: "active"
       source: code # binary
       script:
-        - python setup.py develop
+        - pip install -e .
       repo:
         - url: "https://example.com/example.git"
           name: "project-name"
